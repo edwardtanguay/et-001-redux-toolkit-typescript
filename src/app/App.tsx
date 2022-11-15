@@ -7,7 +7,7 @@ import { PageCart } from '../common/pages/PageCart';
 function App() {
 	return (
 		<div className="App">
-			<h1>Info Site</h1>
+			<h1>Redux Shop</h1>
 			<nav>
 				<NavLink to="/welcome">Welcome</NavLink>
 				<NavLink to="/books">Books</NavLink>
