@@ -9,9 +9,10 @@ export const PageBooks = () => {
 
 	return (
 		<div className="page_books">
-			<div>{count}</div>
-			<button onClick={() => dispatch(add())}>Add</button>
-			<button onClick={() => dispatch(subtract())}>Subtract</button>
+			<button onClick={() => dispatch(subtract())}>Subtract One</button>
+			<button onClick={() => dispatch(add())}>Add One</button>
+			<hr/>
+			<span>{count}</span>
 		</div>
 	);
 };

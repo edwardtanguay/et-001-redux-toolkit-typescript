@@ -8,11 +8,11 @@ export const cartSlice = createSlice({
 	name: 'cart',
 	initialState,
 	reducers: {
-		add: (state) => {
-			state.count += 1;
-		},
 		subtract: (state) => {
-			state.count -= 1;
+			state.count--;
+		},
+		add: (state) => {
+			state.count++;
 		}
 	}
 });
