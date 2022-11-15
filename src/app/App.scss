@@ -44,8 +44,32 @@ body {
 				}
 			}
 		}
+
 		.message {
 			font-size: 2rem;
+		}
+	}
+
+	.pageCart {
+		.cartItems {
+			margin-top: 1rem;
+			.cartItem {
+				background-color: #191919;
+				padding: 1rem;
+				margin-bottom: 1rem;
+				width: 26rem;
+				display: flex;
+				gap: 1rem;
+				img {
+					width: 3rem;
+					height: 4rem;
+				}
+				div.title {
+					font-size: 2rem;
+					color: #777;
+					margin-top: .9rem;
+				}
+			}
 		}
 	}
 }
