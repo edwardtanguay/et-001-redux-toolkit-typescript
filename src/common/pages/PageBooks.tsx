@@ -1,25 +1,34 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
+import { NavLink } from 'react-router-dom';
 
 export const PageBooks = () => {
 	const dispatch = useDispatch();
 	const selectCart = (state: RootState) => state.cart;
-	const { cartItems: items } = useSelector(selectCart);
+	const { books, cartItems } = useSelector(selectCart);
 
 	return (
-		<div className="page_books">
-			<button
-				onClick={() =>
-					dispatch({
-						type: 'cart/addCartItem',
-						payload: { title: 'Node.js Cookbook', price: 23.99 },
-					})
-				}
-			>
-				Node.js Cookbook
-			</button>
-			<hr />
-			<div>You have {items.length} in your cart.</div>
+		<div className="pageBooks">
+			<div className="books">
+				{books.map((book) => {
+					return (
+						<div
+							className="book"
+							onClick={() =>
+								dispatch({
+									type: 'cart/addCartItem',
+									payload: {
+										book
+									},
+								})
+							}
+						>
+							<img src={`images/${book.idCode}.jpg`} />
+						</div>
+					);
+				})}
+			</div>
+			<p className="message">You have {cartItems.length} items in your <NavLink to="/cart">cart</NavLink>.</p>
 		</div>
 	);
 };

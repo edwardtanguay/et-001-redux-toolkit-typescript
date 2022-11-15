@@ -22,4 +22,30 @@ body {
 			color: rgb(211, 211, 110);
 		}
 	}
+
+	a {
+		color: rgb(193, 193, 89);
+	}
+
+	.pageBooks {
+		.books {
+			display: flex;
+			gap: 1rem;
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+
+			.book {
+				cursor: pointer;
+
+				img {
+					width: 10rem;
+					box-shadow: 1px 1px 10px #666;
+					height: 14rem;
+				}
+			}
+		}
+		.message {
+			font-size: 2rem;
+		}
+	}
 }
